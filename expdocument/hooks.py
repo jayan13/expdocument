@@ -105,7 +105,14 @@ app_license = "MIT"
 
 # Scheduled Tasks
 # ---------------
+scheduler_events = {
 
+ 	"daily": [
+ 		"expdocument.expirable_documents.doctype.insurance.update_insurance.update_insurance_status"
+ 	],
+
+    }
+	
 # scheduler_events = {
 # 	"all": [
 # 		"expdocument.tasks.all"
@@ -126,7 +133,22 @@ app_license = "MIT"
 
 # Testing
 # -------
-
+fixtures = [
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "name",
+                "in",
+                (
+                    "Insurance-section_break_13",                    
+                    "Insurance-column_break_6",
+                ),
+            ]
+        ],
+    },
+    
+]
 # before_tests = "expdocument.install.before_tests"
 
 # Overriding Methods

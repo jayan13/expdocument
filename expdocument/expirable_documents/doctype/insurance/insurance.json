@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{policy_number}-{insurance_company_name}",
+ "creation": "2022-03-02 13:47:35.079693",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_number",
+  "insurance_type",
+  "company",
+  "insurance_company_name",
+  "insured_value",
+  "premium",
+  "insurance_start_date",
+  "insurance_end_date",
+  "status",
+  "previous_policy_number",
+  "new_policy_number",
+  "purchase_invoice",
+  "assets",
+  "attachement",
+  "remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "policy_number",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Policy Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "insurance_type",
+   "fieldtype": "Link",
+   "label": "Insurance Type",
+   "options": "Insurance Type"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Insured company name",
+   "options": "Company"
+  },
+  {
+   "fieldname": "insurance_company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insurance company name"
+  },
+  {
+   "fieldname": "insured_value",
+   "fieldtype": "Currency",
+   "label": "Insured value"
+  },
+  {
+   "fieldname": "premium",
+   "fieldtype": "Currency",
+   "label": "Premium"
+  },
+  {
+   "fieldname": "insurance_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Insurance Start Date"
+  },
+  {
+   "fieldname": "insurance_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Insurance End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nRenewed\nExpired\nClosed"
+  },
+  {
+   "fieldname": "previous_policy_number",
+   "fieldtype": "Link",
+   "label": "Previous Policy Number",
+   "options": "Insurance"
+  },
+  {
+   "fieldname": "new_policy_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "New Policy Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Data",
+   "label": "Purchase Invoice"
+  },
+  {
+   "fieldname": "assets",
+   "fieldtype": "Table",
+   "label": "Assets",
+   "options": "Asset Insurance"
+  },
+  {
+   "fieldname": "attachement",
+   "fieldtype": "Attach",
+   "label": "Attachement"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Text",
+   "label": "Remark"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-03-02 22:05:04.918866",
+ "modified_by": "Administrator",
+ "module": "Expirable Documents",
+ "name": "Insurance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "policy_number,insurance_company_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "policy_number"
+}
